@@ -2,3 +2,5 @@ venv/
 .vscode/
 solving-problems
 note.org
+__pycache__
+*.pyc
