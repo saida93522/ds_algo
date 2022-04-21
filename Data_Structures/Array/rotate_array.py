@@ -4,7 +4,7 @@ from collections import deque
 #input: nums = [1,2,3,4,5,6,7], k = 3
 #Output: [5,6,7,1,2,3,4]
 
-#Solution: #1 using slice method , Time-complexity of 0(n) and space complexity of(1)
+#Solution: #1 using slice method , Time-complexity is 0(n) and space complexity is 0(n)
 
 def rotate_right(nums,k):
     #  rotate a list in place
