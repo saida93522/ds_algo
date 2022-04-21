@@ -1,26 +1,28 @@
+from collections import deque
 #Given an array, rotate the array to the right by k steps, where k is non-negative.
 #Example 1:
-#nput: nums = [1,2,3,4,5,6,7], k = 3
+#input: nums = [1,2,3,4,5,6,7], k = 3
 #Output: [5,6,7,1,2,3,4]
 
-#Solution: #1
-# class Rotate(object):
-#     def rotate(self,nums,k):
-#         k %= len(nums)
-#         nums[:] = nums[len(nums)-k:] + nums[:len(nums) -k]
-#         return nums
+#Solution: #1 using slice method , Time-complexity of 0(n) and space complexity of(1)
 
-    
+def rotate_right(nums,k):
+    #  rotate a list in place
+    k %= len(nums) #avoid overflow
+    nums[:] = nums[len(nums)-k:] + nums[:len(nums) -k] #store elements -k to len and len(num) to k and concatenate arrays   
+    return nums
 
-# my_list = Rotate()
-# result = my_list.rotate([1,2,3,4,5,6,7],3)
-# print(result)
+def rotate_left(nums,k):
+    k %= len(nums)
+    nums[:] = nums[k:] + nums[:k]
+    return nums
 
+#Solution: 2 using deque
 
-k = 3
-nums = [1,2,3,4,5,6,7]
+def rotate_nums(nums,k):
+    nums = deque(nums)
+    nums.rotate(k)
+    return nums
 
-mid = len(nums) - (k % len(nums))
-nums[:] = nums[mid:] + nums[:mid]
-del mid
-print(nums)
+rotate_nums([1,2,3,4,5,6,7],3)
+
