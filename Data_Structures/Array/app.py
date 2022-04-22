@@ -65,3 +65,7 @@ def check_for_duplicates(arr):
 # print(result)
 # print(timeit.default_timer()-t1)
 
+
+
+
+    
