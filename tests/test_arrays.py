@@ -3,7 +3,7 @@ import unittest
 from Data_Structures.Array import contains_duplicate as duplicate
 from Data_Structures.Array import merge_sorted_array as merged_array
 from Data_Structures.Array import rotate_array as rotate_array
-
+from Data_Structures.Array import move_zeros as move_zeros
 
 class TestArrays(unittest.TestCase):
     def test_if_it_contains_duplicates(self):
@@ -35,3 +35,11 @@ class TestArrays(unittest.TestCase):
         n = 4
         expected = rotate_array.rotate_left(arr,n)
         self.assertEqual(expected, [10,11,12,13,14,15,16,17])
+
+    def test_zeros_pushed_end_of_array(self):
+        arr = [3,8,0,6,0,12]
+        expected = move_zeros.move_zeros(arr)
+        expected1 = move_zeros.move_zeros_sort(arr)
+        actual = [3,8,6,12,0,0]
+        self.assertEqual(expected,actual)
+        self.assertEqual(expected1,actual)
