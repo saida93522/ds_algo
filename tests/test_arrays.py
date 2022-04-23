@@ -4,6 +4,7 @@ from Data_Structures.Array import contains_duplicate as duplicate
 from Data_Structures.Array import merge_sorted_array as merged_array
 from Data_Structures.Array import rotate_array as rotate_array
 from Data_Structures.Array import move_zeros as move_zeros
+from Data_Structures.Array import two_sum as two_sum
 
 class TestArrays(unittest.TestCase):
     def test_if_it_contains_duplicates(self):
@@ -43,3 +44,11 @@ class TestArrays(unittest.TestCase):
         actual = [3,8,6,12,0,0]
         self.assertEqual(expected,actual)
         self.assertEqual(expected1,actual)
+
+    def test_two_sum_indices(self):
+        arr = [2,9,4,6]
+        target = 10
+        expected = two_sum.two_sum1(arr,target)
+        actual = [2,3]
+        self.assertEqual(expected,actual)
+        self.assertNotEqual(expected,[3,4])

@@ -34,21 +34,20 @@ target = 9
 #Solution: 2
 #STORES the value of  target - element as key and its index as value
 # 
-nums = [2,7,11,15]
+# numbers = [2,7,11,15]
 
-storage = {} #val : index
-
-for i,e in enumerate(nums):
-    # check if the difference in hashmap
-    difference = target - e
-    if difference in storage:
-        #return a pair of indices. the index of the value in the hashmap and index in array
-        print(i)
-        print([storage[difference], i])
-    else: 
-        print(i)
-        storage[e] = i
-print(storage)
+def two_sum1(nums,target):
+    storage = {} #val : index
+    for i,e in enumerate(nums):
+        # check if the difference in hashmap
+        difference = target - e
+        
+        if difference in storage:
+            #return a pair of indices. the index of the value in the hashmap and index in array
+            return [storage[difference], i]
+        else:
+            storage[e] = i
+        
     
 
 """ Example #storing the value of  target - element as key and its index as value.
