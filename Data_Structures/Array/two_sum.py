@@ -92,5 +92,5 @@ def two_sum_sorted(nums, target):
             l_pointer +=1
         else:
             # otherwise current_sum == target
-            return l_pointer+1,r_pointer+1
+            return [l_pointer+1,r_pointer+1]
         

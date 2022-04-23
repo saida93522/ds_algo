@@ -52,3 +52,11 @@ class TestArrays(unittest.TestCase):
         actual = [2,3]
         self.assertEqual(expected,actual)
         self.assertNotEqual(expected,[3,4])
+        
+    def test_two_sum_sorted_indices(self):
+        arr = [2,3,12,19]
+        target = 5
+        expected = two_sum.two_sum_sorted(arr,target)
+        actual = [1,2]
+        self.assertEqual(expected,actual)
+        self.assertNotEqual(expected,[0,1])
