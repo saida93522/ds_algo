@@ -64,3 +64,4 @@ def check_for_duplicates(arr):
 # result =  merge_data(array2,array1)
 # print(result)
 # print(timeit.default_timer()-t1)
+

@@ -21,7 +21,7 @@ and use those stored values to look up and see whether our current value plus an
 
 """
 
-#Solution 1 -- worst case O(n^2)
+#Solution: 1 -- worst case O(n^2)
 # nums = [2,7,11,15]
 # nums = [3,2,4]
 target = 9
@@ -31,19 +31,7 @@ target = 9
 #             print([i, j])
   
     
-#Solution 2
-dic = {} # keep track of values and indices that we want to see
-# for i,num in enumerate(nums):
-#     print('num is: ', num)
-#     if target - num in dic:
-#         print(dic[target - num], i)
-#     elif num not in dic:
-#         dic[num] = i
-#         print('dic[num] is : ',dic[num])
-# print(dic)
-
-
-
+#Solution: 2
 #STORES the value of  target - element as key and its index as value
 # 
 nums = [2,7,11,15]
@@ -82,8 +70,14 @@ print(storage)
 
 
 
-#Solution 3 O(N)
-def twoSum(self, nums, target):
+#Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order, find two numbers such that they add up to a specific target number. Let these two numbers be numbers[index1] and numbers[index2] where 1 <= index1 < index2 <= numbers.length.
+
+# Return the indices of the two numbers, index1 and index2, added by one as an integer array [index1, index2] of length 2.
+
+# The tests are generated such that there is exactly one solution. You may not use the same element twice.
+
+# Your solution must use only constant extra space.
+def two_sum_sorted(nums, target):
     """O(N)"""
     nums_sorted = sorted(nums) # returns sorted list
         
@@ -99,5 +93,5 @@ def twoSum(self, nums, target):
             l_pointer +=1
         else:
             # otherwise current_sum == target
-            return [l_pointer,r_pointer]
+            return l_pointer+1,r_pointer+1
         
