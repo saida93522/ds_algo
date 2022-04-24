@@ -64,3 +64,16 @@ def check_for_duplicates(arr):
 # result =  merge_data(array2,array1)
 # print(result)
 # print(timeit.default_timer()-t1)
+def max_sub_array(nums):
+    max_sub = nums[0] #assume first index is max sub
+    cur_sum = 0
+    for i in nums:
+        if cur_sum < 0:
+            cur_sum = 0
+        cur_sum += i
+        max_sub = max(max_sub,cur_sum)
+    return max_sub
+
+
+result = max_sub_array([-2,1,-3,4,-1,2,1,-5,4])
+print(result)
