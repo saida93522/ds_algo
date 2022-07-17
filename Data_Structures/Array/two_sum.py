@@ -11,10 +11,7 @@ Example:
     Because nums[0] + nums[1] = 2 + 7 = 9,
     return (0, 1)
 
-solution #1 -- Double for loop however this will be a Brute force meaning it has a growth rate of n^2. run time is going to be O(n^2) i.e Quadratic time.g
-If input size is 2, it will do four operations.
-1. loop through list of numbers
-2. loop through the list of numbers second time, So we can find every single combination of additions between numbers.
+solution #1 --Brute force, to loop through twice until can find every single combination of additions between numbers resulting in a growth rate of n^2. run time is going to be O(n^2) i.e Quadratic time.g
 
 solution #2--O(N) Use dictionary to store indices and values we've already seen
 and use those stored values to look up and see whether our current value plus anything thats stored will equal the target.
