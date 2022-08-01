@@ -1,5 +1,5 @@
 import time
-
+from collections import Counter
 #Given an array of integers, find if the array contains any duplicates.
 #Your function should return true if any value appears at least twice in the array, and it should return false if every element is distinct.
 #Example 1:
@@ -115,6 +115,22 @@ def check_duplicate5(arr):
 # print(result4)
 # t4b = time.time()
 # print(t4a - t4b)
+
+
+
+def check_duplicate6(arr):
+    for value in Counter(arr).values():
+        print(value)
+        if value > 1:
+            return False
+    return True
+    
+
+result6 = check_duplicate6( [4,2,4,3,1])
+print(result6)
+
+
+
 
 
 # def dup(nums):
